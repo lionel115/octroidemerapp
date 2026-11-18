@@ -1,0 +1,83 @@
+// MCD (notation Merise) — rendu : dot -Tpng docs/mcd.dot -o docs/mcd.png
+graph MCD {
+  graph [layout=neato, overlap=false, splines=true, sep="+12", fontname="Helvetica", pad=0.3, bgcolor=white];
+  node  [fontname="Helvetica", fontsize=10];
+  edge  [fontname="Helvetica", fontsize=9, color="#555555"];
+
+  // ---------- entités
+  node [shape=plain];
+  DELIB [pos="0,4!", label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#eef3fa">
+    <tr><td bgcolor="#2f5d8a"><font color="white"><b>DÉLIBÉRATION</b></font></td></tr>
+    <tr><td align="left"><u>numéro</u></td></tr><tr><td align="left">organe (AP/CP/CR)</td></tr>
+    <tr><td align="left">nature</td></tr><tr><td align="left">objet</td></tr>
+    <tr><td align="left">date séance, date publication</td></tr><tr><td align="left">date avis commission ad hoc</td></tr>
+    <tr><td align="left">date début, date fin</td></tr></table>>];
+
+  LIGNE [pos="5,4!", label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#fdf3e4">
+    <tr><td bgcolor="#b0701c"><font color="white"><b>EXONÉRATION</b></font></td></tr>
+    <tr><td align="left"><u>id</u></td></tr><tr><td align="left">désignation (texte délibération)</td></tr>
+    <tr><td align="left">taux appliqué</td></tr><tr><td align="left">date début ligne, date fin ligne</td></tr>
+    <tr><td align="left">page</td></tr></table>>];
+
+  BIEN [pos="10,4!", label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#eef3fa">
+    <tr><td bgcolor="#2f5d8a"><font color="white"><b>BIEN</b></font></td></tr>
+    <tr><td align="left"><u>code NC</u> (8 chiffres)</td></tr><tr><td align="left">désignation</td></tr></table>>];
+
+  BENEF [pos="5,0.4!", label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#eef3fa">
+    <tr><td bgcolor="#2f5d8a"><font color="white"><b>BÉNÉFICIAIRE</b></font></td></tr>
+    <tr><td align="left"><u>id</u></td></tr></table>>];
+
+  ACT [pos="2.5,-2.6!", label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#eef3fa">
+    <tr><td bgcolor="#2f5d8a"><font color="white"><b>ACTIVITÉ</b></font></td></tr>
+    <tr><td align="left"><u>code NAF</u></td></tr><tr><td align="left">nomenclature (2008/2025)</td></tr>
+    <tr><td align="left">section, libellé</td></tr></table>>];
+
+  CAT [pos="7.5,-2.6!", label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#eef3fa">
+    <tr><td bgcolor="#2f5d8a"><font color="white"><b>CATÉGORIE_BÉNÉFICIAIRE</b></font></td></tr>
+    <tr><td align="left"><u>code</u></td></tr><tr><td align="left">libellé</td></tr></table>>];
+
+  SRC [pos="10,-2.6!", label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#eaf5ec">
+    <tr><td bgcolor="#3c7d4a"><font color="white"><b>SOURCE_TARIF</b></font></td></tr>
+    <tr><td align="left"><u>code</u></td></tr><tr><td align="left">libellé, date d'effet</td></tr></table>>];
+
+  LT [pos="12.6,0.6!", label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#eaf5ec">
+    <tr><td bgcolor="#3c7d4a"><font color="white"><b>TAUX</b></font></td></tr>
+    <tr><td align="left"><u>id</u></td></tr><tr><td align="left">complément TARIC, EX</td></tr>
+    <tr><td align="left">libellé</td></tr><tr><td align="left">taux OME, OMRE, OMI, OMRI</td></tr>
+    <tr><td align="left">écart (A/B)</td></tr></table>>];
+
+  // ---------- associations
+  node [shape=ellipse, style=filled, fillcolor="#ffffff", color="#333333", fontsize=9];
+  DECIDER   [pos="2.5,4!",   label="décider"];
+  PORTER    [pos="7.7,4!",   label="porter sur"];
+  VISER     [pos="5,2!",     label="viser"];
+  MODIFIER  [pos="-2.2,6.6!",  label=<modifier<br/><font point-size="8">type (abrogation/prorogation)<br/>date effet, nouvelle date fin</font>>];
+  AGREER    [pos="-0.6,-0.6!", label=<agréer<br/><font point-size="8">n° d'ordre</font>>];
+  CORRESP   [pos="0,-4.6!", label=<correspondre<br/><font point-size="8">NAF 2008 → NAF 2025</font>>];
+  ETRE      [pos="5,-1.2!",  label="est un (XT)", shape=triangle, fillcolor="#f3f3f3"];
+  TARIFER   [pos="12.6,4!",  label="tarifer"];
+  CONTENIR  [pos="12.6,-2.6!", label="contenir"];
+  PUBLIER   [pos="4,6.6!",  label="publier"];
+
+  DELIB -- DECIDER  [label="0,n"];
+  DECIDER -- LIGNE  [label="1,1"];
+  LIGNE -- PORTER   [label="1,1"];
+  PORTER -- BIEN    [label="0,n"];
+  LIGNE -- VISER    [label="1,1"];
+  VISER -- BENEF    [label="0,n"];
+  BENEF -- ETRE;
+  ETRE -- ACT;
+  ETRE -- CAT;
+  DELIB -- MODIFIER [label="0,n (source)"];
+  MODIFIER -- DELIB [label="0,n (cible)"];
+  DELIB -- AGREER   [label="0,n"];
+  AGREER -- ACT     [label="0,n"];
+  ACT -- CORRESP    [label="0,n (2008)"];
+  CORRESP -- ACT    [label="0,n (2025)"];
+  BIEN -- TARIFER   [label="0,n"];
+  TARIFER -- LT     [label="1,1"];
+  LT -- CONTENIR    [label="1,1"];
+  CONTENIR -- SRC   [label="1,n"];
+  SRC -- PUBLIER    [label="0,1"];
+  PUBLIER -- DELIB  [label="0,n"];
+}

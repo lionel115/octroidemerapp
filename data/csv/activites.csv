@@ -1,0 +1,135 @@
+code_naf,nomenclature,section,libelle,ordre,numero
+01.13Z,NAF2008,A,"Culture de légumes, de melons, de racines et de tubercules",1,AP/25-15
+01.14Z,NAF2008,A,Culture de la canne à sucre,2,AP/25-15
+01.22Z,NAF2008,A,Culture de fruits tropicaux et subtropicaux,3,AP/25-15
+01.24Z,NAF2008,A,Culture de fruits à pépins et à noyau,4,AP/25-15
+01.28Z,NAF2008,A,"Culture de plantes à épices, aromatiques, médicinales et pharmaceutiques",5,AP/25-15
+01.30Z,NAF2008,A,Reproduction de plantes,6,AP/25-15
+01.42Z,NAF2008,A,Elevage d'autres bovins et de buffles,7,AP/25-15
+01.46Z,NAF2008,A,Elevage de porcins,8,AP/25-15
+01.47Z,NAF2008,A,Élevage de volailles,9,AP/25-15
+01.49Z,NAF2008,A,Elevage d'autres animaux,10,AP/25-15
+01.50Z,NAF2008,A,Culture et élevage associés,11,AP/25-15
+03.11Z,NAF2008,A,Pêche en mer,12,AP/25-15
+03.21Z,NAF2008,A,Aquaculture en mer,13,AP/25-15
+08.12Z,NAF2008,B,"Exploitation de gravières et sablières, extraction d'argiles et de kaolin",14,AP/25-15
+10.11Z,NAF2008,C,Transformation et conservation de la viande de boucherie,15,AP/25-15
+10.12Z,NAF2008,C,Transformation et conservation de la viande de volaille,16,AP/25-15
+10.13A,NAF2008,C,Préparation industrielle de produits à base de viande,17,AP/25-15
+10.20Z,NAF2008,C,"Transformation et conservation de poisson, de crustacés et de mollusques",18,AP/25-15
+10.32Z,NAF2008,C,Préparation de jus de fruits et légumes,19,AP/25-15
+10.39A,NAF2008,C,Autre transformation et conservation de légumes,20,AP/25-15
+10.39B,NAF2008,C,Transformation et conservation de fruits,21,AP/25-15
+10.51A,NAF2008,C,Fabrication de lait liquide et de produits frais,22,AP/25-15
+10.51D,NAF2008,C,Fabrication d'autres produits laitiers,23,AP/25-15
+10.52Z,NAF2008,C,Fabrication de glaces et de sorbets,24,AP/25-15
+10.61A,NAF2008,C,Meunerie,25,AP/25-15
+10.61B,NAF2008,C,Autres activités du travail des grains,26,AP/25-15
+10.71A,NAF2008,C,Fabrication industrielle de pain et de pâtisserie fraîche,27,AP/25-15
+10.71C,NAF2008,C,Boulangerie et boulangerie-pâtisserie,28,AP/25-15
+10.71D,NAF2008,C,Pâtisserie,29,AP/25-15
+10.72Z,NAF2008,C,"Fabrication de biscuits, biscottes et pâtisseries de conservation",30,AP/25-15
+10.81Z,NAF2008,C,Fabrication de sucre,31,AP/25-15
+10.82Z,NAF2008,C,"Fabrication de cacao, chocolat et de produits de confiserie",32,AP/25-15
+10.83Z,NAF2008,C,Transformation du thé et du café,33,AP/25-15
+10.84Z,NAF2008,C,Fabrication de condiments et assaisonnements,34,AP/25-15
+10.85Z,NAF2008,C,Fabrication de plats préparés,35,AP/25-15
+10.89Z,NAF2008,C,Fabrication d'autres produits alimentaires nca,36,AP/25-15
+10.91Z,NAF2008,C,Fabrication d'aliments pour animaux de ferme,37,AP/25-15
+11.01Z,NAF2008,C,Production de boissons alcooliques distillées,38,AP/25-15
+11.05Z,NAF2008,C,Fabrication de bière,39,AP/25-15
+11.07A,NAF2008,C,Industrie des eaux de table,40,AP/25-15
+11.07B,NAF2008,C,Production de boissons rafraîchissantes,41,AP/25-15
+13.30Z,NAF2008,C,Ennoblissement textile,42,AP/25-15
+13.92Z,NAF2008,C,"Fabrication d'articles textiles, sauf habillement",43,AP/25-15
+13.94Z,NAF2008,C,"Fabrication de ficelles, cordes et filets",44,AP/25-15
+13.95Z,NAF2008,C,"Fabrication de non-tissés, sauf habillement",45,AP/25-15
+14.12Z,NAF2008,C,Fabrication de vêtements de travail,46,AP/25-15
+14.13Z,NAF2008,C,Fabrication de vêtements de dessus,47,AP/25-15
+14.14Z,NAF2008,C,Fabrication de vêtements de dessous,48,AP/25-15
+14.19Z,NAF2008,C,Fabrication d'autres vêtements et accessoires,49,AP/25-15
+16.10A,NAF2008,C,"Sciage et rabotage du bois, hors imprégnation",50,AP/25-15
+16.10B,NAF2008,C,Imprégnation du bois,51,AP/25-15
+16.23Z,NAF2008,C,Fabrication de charpentes et d'autres menuiseries,52,AP/25-15
+16.24Z,NAF2008,C,Fabrication d'emballages en bois,53,AP/25-15
+16.29Z,NAF2008,C,"Fabrication d'objets divers en bois ; fabrication d'objets en liège, vannerie et sparterie",54,AP/25-15
+17.12Z,NAF2008,C,Fabrication de papier et de carton,55,AP/25-15
+17.21A,NAF2008,C,Fabrication de carton ondulé,56,AP/25-15
+17.21B,NAF2008,C,Fabrication de cartonnages,57,AP/25-15
+17.21C,NAF2008,C,Fabrication d'emballages en papier,58,AP/25-15
+17.22Z,NAF2008,C,Fabrication d'articles en papier à usage sanitaire ou domestique,59,AP/25-15
+17.23Z,NAF2008,C,Fabrication d'articles de papeterie,60,AP/25-15
+18.11Z,NAF2008,C,Imprimerie de journaux,61,AP/25-15
+18.12Z,NAF2008,C,Autre imprimerie (labeur),62,AP/25-15
+18.13Z,NAF2008,C,Activités de pré-presse,63,AP/25-15
+20.11Z,NAF2008,C,Fabrication de gaz industriels,64,AP/25-15
+20.13B,NAF2008,C,Fabrication d'autres produits chimiques inorganiques de base nca,65,AP/25-15
+20.14Z,NAF2008,C,Fabrication d'autres produits chimiques organiques de base,66,AP/25-15
+20.15Z,NAF2008,C,Fabrication de produits azotés et d'engrais,67,AP/25-15
+20.20Z,NAF2008,C,Fabrication de pesticides et d'autres produits agrochimiques,68,AP/25-15
+20.30Z,NAF2008,C,"Fabrication de peintures, vernis, encres et mastics",69,AP/25-15
+20.41Z,NAF2008,C,"Fabrication de savons, détergents et produits d'entretien",70,AP/25-15
+20.42Z,NAF2008,C,Fabrication de parfums et de produits pour la toilette,71,AP/25-15
+20.59Z,NAF2008,C,Fabrication d'autres produits chimiques nca,72,AP/25-15
+21.20Z,NAF2008,C,Fabrication de préparations pharmaceutiques,73,AP/25-15
+22.11Z,NAF2008,C,Fabrication et rechapage de pneumatiques,74,AP/25-15
+22.19Z,NAF2008,C,Fabrication d'autres articles en caoutchouc,75,AP/25-15
+22.21Z,NAF2008,C,"Fabrication de plaques, feuilles, tubes et profilés en matières plastiques",76,AP/25-15
+22.22Z,NAF2008,C,Fabrication d'emballages en matières plastiques,77,AP/25-15
+22.23Z,NAF2008,C,Fabrication d'éléments en matières plastiques pour la construction,78,AP/25-15
+22.29A,NAF2008,C,Fabrication de pièces techniques à base de matières plastiques,79,AP/25-15
+22.29B,NAF2008,C,Fabrication de produits de consommation courante en matières plastiques,80,AP/25-15
+23.12Z,NAF2008,C,Façonnage et transformation du verre plat,81,AP/25-15
+23.19Z,NAF2008,C,"Fabrication et façonnage d'autres articles en verre, y compris verre technique",82,AP/25-15
+23.41Z,NAF2008,C,Fabrication d'articles céramiques à usage domestique ou ornemental,83,AP/25-15
+23.49Z,NAF2008,C,Fabrication d'autres produits céramiques,84,AP/25-15
+23.51Z,NAF2008,C,Fabrication de ciment,85,AP/25-15
+23.61Z,NAF2008,C,Fabrication d'éléments en béton pour la construction,86,AP/25-15
+23.63Z,NAF2008,C,Fabrication de béton prêt à l'emploi,87,AP/25-15
+23.69Z,NAF2008,C,"Fabrication d'ouvrages en béton, en ciment ou plâtre",88,AP/25-15
+23.70Z,NAF2008,C,"Taille, façonnage et finissage de pierres",89,AP/25-15
+23.99Z,NAF2008,C,Fabrication d'autres produits minéraux non métalliques n.c.a,90,AP/25-15
+24.20Z,NAF2008,C,"Fabrication de tubes, tuyaux, profilés creux et accessoires correspondants en acier",91,AP/25-15
+24.33Z,NAF2008,C,Profilage à froid par formage ou pliage,92,AP/25-15
+24.34Z,NAF2008,C,Tréfilage à froid,93,AP/25-15
+24.42Z,NAF2008,C,Métallurgie de l'aluminium,94,AP/25-15
+25.11Z,NAF2008,C,Fabrication de structures métalliques et de parties de structures,95,AP/25-15
+25.12Z,NAF2008,C,Fabrication de portes et fenêtres en métal,96,AP/25-15
+25.29Z,NAF2008,C,"Fabrication d'autres réservoirs, citernes et conteneurs métalliques",97,AP/25-15
+25.50B,NAF2008,C,"Découpage, emboutissage",98,AP/25-15
+25.61Z,NAF2008,C,Traitement et revêtement des métaux,99,AP/25-15
+25.93Z,NAF2008,C,"Fabrication d'articles en fils métalliques, de chaînes et de ressorts",100,AP/25-15
+25.99B,NAF2008,C,Fabrication d’autres articles métalliques,101,AP/25-15
+26.20Z,NAF2008,C,Fabrication d'ordinateurs et d'équipements périphériques,102,AP/25-15
+27.11Z,NAF2008,C,"Fabrication de moteurs, génératrices et transformateurs électriques",103,AP/25-15
+27.12Z,NAF2008,C,Fabrication de matériel de distribution et de commande électrique,104,AP/25-15
+27.40Z,NAF2008,C,Fabrication d'appareils d'éclairage électrique,105,AP/25-15
+27.52Z,NAF2008,C,Fabrication d'appareils ménagers non électriques,106,AP/25-15
+28.11Z,NAF2008,C,"Fabrication de moteurs et turbines, à l'exception des moteurs d'avions et de véhicules",107,AP/25-15
+28.12Z,NAF2008,C,Fabrication d'équipements hydrauliques et pneumatiques,108,AP/25-15
+28.25Z,NAF2008,C,Fabrication d'équipements aérauliques et frigorifiques industriels,109,AP/25-15
+30.12Z,NAF2008,C,Construction de bateaux de plaisance,110,AP/25-15
+30.92Z,NAF2008,C,Fabrication de bicyclettes et de véhicules pour invalides,111,AP/25-15
+31.01Z,NAF2008,C,Fabrication de meubles de bureau et de magasin,112,AP/25-15
+31.02Z,NAF2008,C,Fabrication de meubles de cuisine,113,AP/25-15
+31.03Z,NAF2008,C,Fabrication de matelas,114,AP/25-15
+31.09A,NAF2008,C,Fabrication de sièges d'ameublement intérieur,115,AP/25-15
+31.09B,NAF2008,C,Fabrication d'autres meubles et industries connexes de l'ameublement,116,AP/25-15
+32.12Z,NAF2008,C,Fabrication d'articles de joaillerie et de bijouterie,117,AP/25-15
+32.13Z,NAF2008,C,Fabrication d'articles de bijouterie fantaisie et articles similaires,118,AP/25-15
+32.30Z,NAF2008,C,Fabrication d'articles de sport,119,AP/25-15
+32.50A,NAF2008,C,Fabrication de matériel médico-chirurgical et dentaire,120,AP/25-15
+32.50B,NAF2008,C,Fabrication de lunettes,121,AP/25-15
+32.99Z,NAF2008,C,Autres activités manufacturières nca,122,AP/25-15
+35.11Z,NAF2008,D,Production d'électricité,123,AP/25-15
+38.32Z,NAF2008,E,Récupération des déchets triés,124,AP/25-15
+50.10Z,NAF2008,H,Transports maritimes et côtiers de passagers,125,AP/25-15
+52.22Z,NAF2008,H,Services auxiliaires de transport par eau,126,AP/25-15
+52.24A,NAF2008,H,Manutention portuaire,127,AP/25-15
+55.10Z,NAF2008,I,Hôtels et hébergement similaire,128,AP/25-15
+58.13Z,NAF2008,J,Édition de journaux,129,AP/25-15
+74.20Z,NAF2008,M,Activités photographiques,130,AP/25-15
+01.22Y,NAF2025,,Culture de fruits tropicaux et subtropicaux,,
+25.12Y,NAF2025,,Fabrication de portes et fenêtres en métal,,
+23.61Y,NAF2025,,Fabrication d’éléments en béton pour la construction,,
+31.00H,NAF2025,,Fabrication de meubles de cuisine et salle de bain,,

@@ -1,0 +1,15 @@
+numero,organe,nature,objet,date_seance,date_publication,date_avis_commission,date_debut,date_fin,taux_applique,fichier
+AP/23-30,AP,REFERENCEE,"Délibération abrogée (citée en annexe I d'AP/25-15, texte non fourni)",2023-10-25,,,,,,
+CR/23-840-2,CR,REFERENCEE,"Délibération abrogée (citée en annexe I d'AP/25-15, texte non fourni)",2023-11-17,,,,,,
+CR/23-977-2,CR,REFERENCEE,"Délibération abrogée (citée en annexe I d'AP/25-15, texte non fourni)",2023-12-13,,,,,,
+CP/24-468-2,CP,REFERENCEE,"Délibération abrogée (citée en annexe I d'AP/25-15, texte non fourni)",2024-08-09,,,,,,
+CP/24-715-2,CP,REFERENCEE,"Délibération abrogée (citée en annexe I d'AP/25-15, texte non fourni)",2024-11-19,,,,,,
+CP/25-211-2,CP,REFERENCEE,"Délibération abrogée (citée en annexe I d'AP/25-15, texte non fourni)",2025-04-14,,,,,,
+CP/25-248,CP,REFERENCEE,"Délibération abrogée (citée en annexe I d'AP/25-15, texte non fourni)",2025-04-30,,,,,,
+AP/25-15,AP,CADRE,Adoption du dispositif d'exonération d'octroi de mer pour l'importation de biens destinés à toute personne exerçant une activité économique dans des secteurs agréés,2025-06-19,2025-07-04,2025-06-13,2025-08-01,,0.0,ap_25_15.pdf
+CP/25-270,CP,EXONERATION_PARTIELLE,"Exonération partielle de la taxe d'octroi de mer pour l'importation de biens destinés à une personne exerçant une activité économique, au sens de l'article 256 A du code général des impôts, dans le secteur de la fabrication de béton prêt à l'emploi",2025-04-30,2025-05-13,2025-04-09,2025-05-13,2026-04-30,2.0,cp_25_270.pdf
+CP/25-456,CP,EXONERATION_CATEGORIE,Exonération de la taxe d'octroi de mer pour l'importation de biens destinés aux établissements et centres de santé,2025-07-23,2025-07-31,,2025-07-31,2026-07-31,0.0,cp_25_456.pdf
+CP/26-220,CP,PROROGATION,Prorogation de la délibération n° CP/25-456 du 23 juillet 2025 portant exonération d'octroi de mer pour l'importation de biens destinés aux établissements et centres de santé,2026-06-18,2026-06-18,,2026-06-18,,0.0,cp_26_220.pdf
+CP/26-465,CP,EXONERATION_SECTORIELLE,Exonération de la taxe d'octroi de mer pour les secteurs suivants : culture de fruits tropicaux et subtropicaux ; fabrication de portes et fenêtres en métal,2026-09-03,2026-09-17,2026-08-07,2026-09-17,2027-09-30,0.0,cp_26_465.pdf
+CP/26-599,CP,EXONERATION_SECTORIELLE,"Exonération de la taxe d'octroi de mer pour les secteurs suivants : fabrication d'éléments en béton pour la construction, fabrication de meubles de cuisine",2026-10-22,2026-10-26,2026-09-10,2026-10-26,2027-09-30,0.0,cp_26_599.pdf
+CP/26-606,CP,MODIFICATION_TARIF,Modification du taux d'octroi de mer applicable aux barres et profilés en aluminium relevant de la position 7604 du tarif des douanes,2026-10-22,2026-10-27,2026-09-10,2026-11-01,,0.0,cp_26_606.pdf

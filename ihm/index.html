@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Octroi de mer : vos produits exonérés — Guadeloupe</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#2a1a10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --creme: #fbf4e4;
+    --papier: #fffdf7;
+    --encre: #2a1a10;
+    --encre-douce: #6b5546;
+    --rouge: #d7263d;
+    --rouge-fonce: #a51428;
+    --rouge-pale: #fde3e3;
+    --jaune: #f4b400;
+    --jaune-pale: #fff1c2;
+    --vert: #157a46;
+    --vert-pale: #d8f2e2;
+    --trait: #cbb9a6;
+    --ombre: 4px 4px 0 var(--encre);
+    --titre: 'Bricolage Grotesque', 'DM Sans', Arial, sans-serif;
+    --mono: 'DM Mono', Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+  html, body { width: 100%; max-width: 100vw; overflow-x: hidden; overflow-x: clip; }
+  body { margin: 0; background: var(--creme); color: var(--encre); font: 17px/1.55 'DM Sans', 'Segoe UI', Arial, sans-serif; }
+  .titre { font-family: var(--titre); letter-spacing: -0.015em; }
+  .mono { font-family: var(--mono); }
+  .wrap { width: 100%; max-width: 1160px; margin-left: auto; margin-right: auto; padding: 0 clamp(16px, 3vw, 28px); }
+  img, svg, table, input, button { max-width: 100%; }
+  .cache { display: none !important; }
+
+  .madras {
+    height: 14px;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 46px, rgba(42,26,16,.18) 46px 48px, transparent 48px 70px),
+      repeating-linear-gradient(90deg, var(--rouge) 0 30px, var(--jaune) 30px 44px, var(--vert) 44px 62px, var(--jaune) 62px 70px, var(--rouge) 70px 84px);
+  }
+
+  .top { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; gap: 12px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; text-decoration: none; color: inherit; }
+  .logo img { width: 34px; height: 34px; transform: rotate(-4deg); }
+  .top a.doc { color: var(--encre); font-size: 14px; font-weight: 500; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+  .hero { padding: 18px 0 30px; max-width: 820px; }
+  .hero h1 { font-size: clamp(34px, 5vw, 56px); line-height: 1.03; margin: 0; font-weight: 800; }
+  .surligne { background: var(--jaune); padding: 0 .16em; border-radius: 4px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .hero p { margin: 16px 0 0; font-size: 19px; color: var(--encre-douce); }
+
+  .bloc { background: var(--papier); border: 2px solid var(--encre); border-radius: 14px; box-shadow: var(--ombre); padding: 26px 28px 28px; margin-bottom: 26px; }
+  .bloc-tete { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+  .num { flex: none; width: 40px; height: 40px; border-radius: 10px; border: 2px solid var(--encre); display: grid; place-items: center; font-family: var(--titre); font-weight: 800; font-size: 20px; }
+  .b1 .num { background: var(--rouge); color: #fff; }
+  .b2 .num { background: var(--jaune); }
+  .b3 .num { background: var(--encre); color: var(--jaune); }
+  .bloc h2 { margin: 0; font-size: 26px; font-weight: 700; }
+  .aide { color: var(--encre-douce); font-size: 15px; margin: 0 0 20px; }
+  .bloc-tete + .aide { margin-left: 54px; }
+
+  label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  label i { font-style: normal; font-weight: 400; color: var(--encre-douce); }
+  label .req { color: var(--rouge-fonce); }
+  input { font: inherit; font-size: 17px; width: 100%; padding: 11px 14px; border: 2px solid var(--encre); border-radius: 9px; background: #fff; color: var(--encre); }
+  input::placeholder { color: #a8968a; }
+  input:focus { outline: none; box-shadow: 0 0 0 4px var(--jaune); }
+  input[type=date] { min-height: 50px; }
+  input.err { border-color: var(--rouge-fonce); background: #fff7f7; }
+
+  button { font: inherit; cursor: pointer; }
+  .btn { font-weight: 700; font-size: 17px; background: var(--rouge); color: #fff; border: 2px solid var(--encre); border-radius: 9px; padding: 12px 22px; box-shadow: 3px 3px 0 var(--encre); transition: transform .08s, box-shadow .08s; white-space: nowrap; }
+  .btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--encre); }
+  .btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--encre); }
+  .btn:disabled { opacity: .6; cursor: wait; }
+  .btn.noir { background: var(--encre); color: var(--jaune); }
+  .lien { background: none; border: none; padding: 2px 0; color: var(--encre); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  .lien:hover { text-decoration-color: var(--rouge); }
+
+  /* formulaire */
+  .form { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 16px; align-items: end; }
+  .form .actions { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 4px; }
+  .form .essai { font-size: 15px; color: var(--encre-douce); }
+  .caf { position: relative; }
+  .caf input { padding-right: 34px; text-align: right; }
+  .caf span { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--encre-douce); font-weight: 700; pointer-events: none; }
+  .erreur { margin-top: 16px; padding: 12px 16px; border-radius: 10px; font-size: 15px; font-weight: 500; background: var(--rouge-pale); border: 2px solid var(--rouge-fonce); color: #7c0f1e; }
+
+  /* fiche + verdict */
+  #resultat { scroll-margin-top: 14px; }
+  .fiche { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+  .fiche .nom { font-family: var(--titre); font-size: 26px; font-weight: 700; line-height: 1.15; }
+  .fiche .meta { font-size: 15px; color: var(--encre-douce); margin-top: 4px; }
+  .verifs { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .verifs li { font-size: 14px; font-weight: 700; border-radius: 99px; padding: 4px 12px; border: 2px solid; }
+  .verifs .oui { background: var(--vert-pale); color: var(--vert); border-color: var(--vert); }
+  .verifs .non { background: var(--rouge-pale); color: var(--rouge-fonce); border-color: var(--rouge-fonce); }
+  .verdict { font-family: var(--titre); font-weight: 800; font-size: 26px; text-transform: uppercase; letter-spacing: .04em; padding: 8px 18px; border: 3px solid; border-radius: 10px; transform: rotate(-3deg); margin-top: 6px; white-space: nowrap; }
+  .verdict.oui { color: var(--vert); background: var(--vert-pale); }
+  .verdict.non { color: var(--rouge-fonce); background: var(--rouge-pale); }
+  .raison { margin-top: 18px; padding: 14px 18px; border-left: 5px solid var(--rouge-fonce); background: var(--creme); font-size: 16px; }
+  .raison b { display: block; font-family: var(--titre); font-size: 18px; margin-bottom: 2px; }
+  .note { margin-top: 18px; padding: 12px 16px; border-radius: 10px; background: var(--jaune-pale); border: 2px solid var(--jaune); font-size: 15px; }
+
+  /* tableau */
+  .tab-tete { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin: 26px 0 12px; }
+  .tab-tete h3 { margin: 0; font-family: var(--titre); font-size: 22px; }
+  .tab-tete p { margin: 2px 0 0; font-size: 15px; color: var(--encre-douce); }
+  .tab-tete .champ { width: 280px; }
+  .tab-tete input { font-size: 15px; padding: 9px 12px; }
+  .table-zone { border: 2px solid var(--encre); border-radius: 12px; overflow: hidden; background: #fff; }
+  table.produits { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table.produits th { text-align: left; background: var(--encre); color: var(--creme); font-weight: 700; font-size: 13px; letter-spacing: .03em; padding: 11px 12px; white-space: nowrap; }
+  table.produits th.n, table.produits td.n { text-align: right; }
+  table.produits td { padding: 11px 12px; border-top: 1px solid #eadfcf; vertical-align: middle; }
+  table.produits tr:nth-child(even) td { background: #fffaf0; }
+  .lib { max-width: 420px; }
+  .lib .t { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .lib .d { font-size: 12px; font-weight: 700; color: var(--encre-douce); margin-top: 3px; font-family: var(--mono); }
+  td.code { font-family: var(--mono); white-space: nowrap; }
+  .tx { font-weight: 700; white-space: nowrap; }
+  .tx.exo { color: var(--vert); }
+  .tx.part { color: #7a5200; }
+  .tx.norm { color: var(--encre-douce); font-weight: 500; }
+  td.saisie { width: 150px; }
+  td.saisie input { font-size: 15px; padding: 7px 26px 7px 10px; border-width: 1.5px; }
+  td.saisie .caf span { right: 10px; font-size: 14px; }
+  td.eco { font-family: var(--titre); font-weight: 800; font-size: 17px; white-space: nowrap; min-width: 96px; }
+  td.eco.vide { color: #c2b2a3; font-weight: 500; }
+  .total {
+    display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+    background: var(--jaune); border-top: 2px solid var(--encre); padding: 14px 16px;
+  }
+  .total .lab { font-weight: 700; }
+  .total .lab small { display: block; font-weight: 400; font-size: 13px; }
+  .total .val { font-family: var(--titre); font-size: 30px; font-weight: 800; }
+  .vide-tab { padding: 18px; color: var(--encre-douce); }
+
+  /* délibérations */
+  .delibs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-top: 26px; }
+  .delib { border: 2px solid var(--encre); border-radius: 12px; padding: 16px 18px; background: var(--creme); }
+  .delib .n { font-family: var(--mono); font-weight: 500; font-size: 15px; background: var(--encre); color: var(--jaune); border-radius: 6px; padding: 2px 8px; }
+  .delib .o { margin: 10px 0 8px; font-size: 15px; line-height: 1.45; }
+  .delib dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; font-size: 14px; }
+  .delib dt { color: var(--encre-douce); }
+  .delib dd { margin: 0; font-weight: 500; }
+  .delib .lien { font-size: 14px; margin-top: 10px; }
+
+  .ensuite { margin-top: 22px; padding: 16px 20px; border-radius: 12px; background: var(--vert-pale); border: 2px solid var(--vert); }
+  .ensuite b.t { font-family: var(--titre); font-size: 19px; display: block; margin-bottom: 4px; }
+  .ensuite ol { margin: 0; padding-left: 22px; }
+  .ensuite li { margin: 3px 0; }
+
+  /* historique */
+  .puces { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+  .puce { background: #fff; border: 2px solid var(--encre); border-radius: 99px; padding: 5px 12px; font-family: var(--mono); font-size: 14px; color: var(--encre); }
+  .puce.abrogee { border-style: dashed; color: var(--encre-douce); }
+  .puce[aria-pressed=true] { background: var(--jaune); font-weight: 500; }
+  .h-form { display: flex; gap: 14px; align-items: flex-end; flex-wrap: wrap; margin-top: 18px; }
+  .h-form > div { width: 230px; }
+  .reponse { margin: 20px 0 6px; padding: 16px 18px; border-radius: 12px; border: 2px solid var(--encre); font-size: 17px; font-weight: 500; box-shadow: 3px 3px 0 var(--encre); }
+  .reponse.EN_VIGUEUR { background: var(--vert-pale); }
+  .reponse.EXPIREE, .reponse.ABROGEE { background: var(--rouge-pale); }
+  .reponse.PAS_ENCORE, .reponse.INCONNU { background: var(--jaune-pale); }
+  .reponse small { display: block; font-weight: 400; font-size: 14px; margin-top: 4px; color: var(--encre-douce); }
+  .h-objet { margin: 16px 0 4px; font-size: 15px; color: var(--encre-douce); }
+  .frise { list-style: none; margin: 14px 0 0; padding: 0 0 0 4px; }
+  .frise li { position: relative; padding: 0 0 16px 30px; }
+  .frise li::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: -6px; width: 2px; background: var(--trait); }
+  .frise li:last-child::before { display: none; }
+  .frise .pt { position: absolute; left: 0; top: 5px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--encre); background: #fff; }
+  .frise li.PROROGATION .pt, .frise li.FIN_EFFECTIVE .pt { background: var(--jaune); }
+  .frise li.ABROGATION .pt { background: var(--rouge); }
+  .frise li.ENTREE_EN_VIGUEUR .pt { background: var(--vert); }
+  .frise li.ici-l .pt { background: var(--encre); }
+  .frise li.passe { color: var(--encre-douce); }
+  .frise .d { font-family: var(--mono); font-size: 14px; font-weight: 500; margin-right: 8px; }
+  .frise .ici { font-size: 12px; font-weight: 700; background: var(--encre); color: var(--jaune); border-radius: 5px; padding: 1px 6px; }
+
+  .avert { font-size: 14px; color: var(--encre-douce); border-left: 4px solid var(--jaune); padding: 4px 0 4px 14px; margin: 0 0 30px; }
+  footer .wrap { padding-top: 18px; padding-bottom: 28px; font-size: 13px; color: var(--encre-douce); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .form { grid-template-columns: 1fr 1fr; }
+    .form .siren { grid-column: 1 / -1; }
+  }
+  @media (max-width: 720px) {
+    /* le tableau devient une liste de cartes */
+    table.produits thead { display: none; }
+    table.produits, table.produits tbody, table.produits tr, table.produits td { display: block; width: 100%; }
+    table.produits tr { padding: 12px 14px; border-top: 1px solid #eadfcf; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
+    table.produits tr:nth-child(even) td { background: none; }
+    table.produits td { border: none; padding: 0; }
+    table.produits td.lib { grid-column: 1 / -1; max-width: none; }
+    table.produits td.n { text-align: left; }
+    table.produits td[data-l]::before { content: attr(data-l); display: block; font-size: 12px; color: var(--encre-douce); font-weight: 500; }
+    td.saisie { width: auto; grid-column: 1 / 2; }
+    td.eco { align-self: end; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 16px; }
+    .hero { padding: 6px 0 24px; }
+    .hero p { font-size: 17px; }
+    .bloc { padding: 20px 18px 22px; border-radius: 12px; box-shadow: 3px 3px 0 var(--encre); }
+    .bloc h2 { font-size: 22px; }
+    .bloc-tete + .aide { margin-left: 0; }
+    .form { grid-template-columns: 1fr; }
+    .form .actions .btn { width: 100%; }
+    .verdict { font-size: 20px; }
+    .tab-tete .champ { width: 100%; }
+    .total .val { font-size: 26px; }
+    .h-form > div { width: 100%; }
+    .h-form .btn { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="madras" aria-hidden="true"></div>
+
+<header class="wrap">
+  <div class="top">
+    <a class="logo" href="/"><img src="favicon.svg" alt="">Simulateur d’exonération d’octroi de mer</a>
+  </div>
+  <div class="hero">
+    <h1 class="titre">Quels produits pouvez-vous importer <span class="surligne">sans octroi de&nbsp;mer&nbsp;?</span></h1>
+    <p>Entrez votre SIREN : on vérifie si votre entreprise est éligible et on vous montre les produits exonérés pour votre activité en Guadeloupe.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 1. saisie -->
+  <section class="bloc b1">
+    <div class="bloc-tete"><span class="num">1</span><h2 class="titre">Votre entreprise</h2></div>
+    <p class="aide">Seul le SIREN est obligatoire. Si vous visez un produit précis, ajoutez son code NC et sa valeur.</p>
+
+    <form class="form" id="form" novalidate>
+      <div class="siren">
+        <label for="siren">SIREN ou SIRET <span class="req">*</span></label>
+        <input id="siren" class="mono" inputmode="numeric" placeholder="983 502 774" autocomplete="off" required>
+      </div>
+      <div>
+        <label for="nc">Code NC <i>(facultatif)</i></label>
+        <input id="nc" class="mono" placeholder="8429 52 10" autocomplete="off">
+      </div>
+      <div>
+        <label for="caf">Valeur CAF / an <i>(facultatif)</i></label>
+        <div class="caf"><input id="caf" inputmode="decimal" placeholder="180 000"><span>€</span></div>
+      </div>
+      <div>
+        <label for="date">Date d’importation</label>
+        <input id="date" type="date">
+      </div>
+      <div class="actions">
+        <span class="essai">Pour essayer : <button type="button" class="lien" id="essai">983 502 774</button></span>
+        <button type="submit" class="btn" id="go">Vérifier mon éligibilité</button>
+      </div>
+    </form>
+    <div id="err" class="erreur cache" role="alert"></div>
+  </section>
+
+  <!-- 2. résultat -->
+  <section class="bloc b2 cache" id="resultat" aria-live="polite">
+    <div class="bloc-tete"><span class="num">2</span><h2 class="titre">Résultat</h2></div>
+    <div id="fiche" class="fiche" style="margin-top:14px"></div>
+    <div id="suite"></div>
+  </section>
+
+  <!-- 3. historique (bonus équipe 3) -->
+  <section class="bloc b3" id="historique">
+    <div class="bloc-tete"><span class="num">3</span><h2 class="titre">Historique des délibérations</h2></div>
+    <p class="aide">Abrogations, prorogations… Choisissez une délibération et une date : on vous dit si elle s’appliquait ce jour-là.</p>
+    <div class="puces" id="puces"></div>
+    <p class="aide" style="margin:0;font-size:14px">En pointillés : les 7 délibérations abrogées par l’annexe I d’AP/25-15.</p>
+    <div class="h-form">
+      <div><label for="h-num">Délibération</label><input id="h-num" class="mono" placeholder="CP/25-456" autocomplete="off"></div>
+      <div><label for="h-date">À la date du</label><input id="h-date" type="date"></div>
+      <button type="button" class="btn noir" id="btn-hist">Voir l’historique</button>
+    </div>
+    <div id="err-h" class="erreur cache" role="alert"></div>
+    <div id="h-res" class="cache"></div>
+  </section>
+
+  <p class="avert">Estimation indicative. L’exonération n’est acquise qu’avec un dossier déposé auprès de la Région <b>avant</b> le dédouanement, puis l’attestation présentée en douane. L’octroi de mer régional (2,5 %) reste dû dans tous les cas.</p>
+</main>
+
+<footer>
+  <div class="madras" aria-hidden="true"></div>
+  <div class="wrap">
+    <span>Projet M2 MIAGE · Université des Antilles</span>
+    <span>Sources : délibérations de la Région Guadeloupe, tarif 2024 (Karudata), API Recherche d’entreprises</span>
+  </div>
+</footer>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const eur = (n) => n == null ? '—' : n.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+const pct = (n) => n == null ? '?' : n.toLocaleString('fr-FR') + ' %';
+const frDate = (iso) => iso ? iso.split('-').reverse().join('/') : '';
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const montant = (s) => {
+  const t = String(s ?? '').replace(/[\s  €]/g, '').replace(',', '.');
+  return t && !isNaN(t) ? Number(t) : null;
+};
+const today = new Date().toISOString().slice(0, 10);
+$('#date').value = today;
+$('#h-date').value = today;
+
+function montrer(sel, msg) { const e = $(sel); e.textContent = msg; e.classList.remove('cache'); }
+function masquer(sel) { $(sel).classList.add('cache'); }
+
+async function api(url) {
+  const r = await fetch(url);
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const d = data.detail;
+    throw new Error(Array.isArray(d) ? d.map((x) => x.msg).join(' ; ') : (d || 'Le serveur a répondu ' + r.status));
+  }
+  return data;
+}
+
+$('#caf').addEventListener('blur', (e) => { const n = montant(e.target.value); if (n != null) e.target.value = n.toLocaleString('fr-FR'); });
+$('#essai').addEventListener('click', () => { $('#siren').value = '983 502 774'; $('#nc').value = ''; $('#caf').value = ''; verifier(); });
+$('#form').addEventListener('submit', (e) => { e.preventDefault(); verifier(); });
+
+// ---------- 1 -> 2
+async function verifier() {
+  masquer('#err');
+  ['#siren', '#nc', '#caf'].forEach((s) => $(s).classList.remove('err'));
+  const siren = $('#siren').value.replace(/\s/g, '');
+  const nc = $('#nc').value.replace(/[\s.]/g, '');
+  const caf = montant($('#caf').value);
+  if (!/^(\d{9}|\d{14})$/.test(siren)) { $('#siren').classList.add('err'); $('#siren').focus(); return montrer('#err', 'Le SIREN compte 9 chiffres, le SIRET 14.'); }
+  if (nc && !/^\d{8}$/.test(nc)) { $('#nc').classList.add('err'); return montrer('#err', 'Un code NC compte 8 chiffres, par exemple 8429 52 10.'); }
+  if ($('#caf').value.trim() && caf == null) { $('#caf').classList.add('err'); return montrer('#err', 'La valeur CAF doit être un montant en euros.'); }
+
+  const q = new URLSearchParams();
+  if (nc) q.set('code_nc', nc);
+  if (caf != null) q.set('valeur_caf', caf);
+  if ($('#date').value) q.set('date', $('#date').value);
+
+  const b = $('#go');
+  b.disabled = true; b.textContent = 'Vérification…';
+  try {
+    afficher(await api(`/entreprises/${siren}/produits?${q}`), caf, nc);
+  } catch (e) {
+    masquer('#resultat'); montrer('#err', e.message);
+  } finally {
+    b.disabled = false; b.textContent = 'Vérifier mon éligibilité';
+  }
+}
+
+function afficher(r, cafSaisi, ncSaisi) {
+  const e = r.entreprise;
+  const v = (ok, oui, non) => `<li class="${ok ? 'oui' : 'non'}">${ok ? '✓ ' + oui : '✗ ' + non}</li>`;
+  const cp = e.codes_postaux.length ? ' (' + e.codes_postaux.join(', ') + ')' : '';
+  $('#fiche').innerHTML = `
+    <div>
+      <div class="nom">${esc(e.raison_sociale || 'Entreprise ' + e.siren)}</div>
+      <div class="meta">SIREN <span class="mono">${esc(e.siren)}</span> · activité <span class="mono">${esc(e.naf)}</span></div>
+      <ul class="verifs">
+        ${v(e.entreprise_active, 'Active', 'Cessée')}
+        ${v(e.etablissement_guadeloupe, 'En Guadeloupe' + cp, 'Hors Guadeloupe' + cp)}
+        ${v(e.activite_eligible || e.categories_possibles.length, 'Activité agréée', 'Activité non agréée')}
+      </ul>
+    </div>
+    <div class="verdict ${e.eligible ? 'oui' : 'non'}">${e.eligible ? 'Éligible' : 'Non éligible'}</div>`;
+
+  if (!e.eligible) {
+    const raisons = e.explication.filter((x) => !x.startsWith('Entreprise active'));
+    $('#suite').innerHTML = `<div class="raison"><b>Pourquoi ?</b>${raisons.map(esc).join(' ')}</div>`;
+    return ouvrir();
+  }
+
+  let h = r.note_categorie ? `<div class="note">${esc(r.note_categorie)}</div>` : '';
+  const n = r.produits.length;
+  const filtreNc = !!ncSaisi;
+  h += `<div class="tab-tete">
+      <div><h3>${filtreNc ? 'Votre produit' : `${n} produit${n > 1 ? 's' : ''} exonéré${n > 1 ? 's' : ''} pour votre activité`}</h3>
+      <p>Délibérations en vigueur au ${frDate(r.date)}. Saisissez une valeur CAF pour chiffrer l’économie.</p></div>
+      ${n > 8 ? `<div class="champ"><input id="filtre" placeholder="Filtrer : excavateur, 8429…" aria-label="Filtrer les produits"></div>` : ''}
+    </div>`;
+
+  if (!n) {
+    h += `<div class="raison"><b>${filtreNc ? 'Produit non exonéré' : 'Aucun produit'}</b>${esc(r.message || '')}</div>`;
+    if (filtreNc) h += `<p style="margin-top:14px"><button type="button" class="lien" id="tout">Voir tous les produits exonérés pour votre activité →</button></p>`;
+  } else {
+    h += `<div class="table-zone"><table class="produits"><thead><tr>
+        <th>Produit</th><th>Code NC</th><th class="n">Taux exonéré</th><th class="n">Taux normal</th><th>Valeur CAF / an</th><th class="n">Économie / an</th>
+      </tr></thead><tbody>${r.produits.map((p, i) => ligne(p, i, filtreNc ? cafSaisi : null)).join('')}</tbody></table>
+      <div class="total"><div class="lab">Économie totale<small>OMR de 2,5 % toujours dû, non compris</small></div><div class="val" id="total">0 €</div></div></div>`;
+    if (filtreNc) h += `<p style="margin-top:12px"><button type="button" class="lien" id="tout">Voir tous les produits exonérés pour votre activité →</button></p>`;
+  }
+
+  if (r.deliberations.length) {
+    h += `<div class="delibs">${r.deliberations.map((d) => `
+      <div class="delib">
+        <span class="n">${esc(d.numero)}</span>
+        <p class="o">${esc(d.objet)}</p>
+        <dl>
+          <dt>En vigueur</dt><dd>du ${frDate(d.date_debut)} ${d.date_fin ? 'au ' + frDate(d.date_fin) : '(sans date de fin)'}</dd>
+          ${d.prorogee_par ? `<dt>Prorogée</dt><dd>par ${esc(d.prorogee_par)} (fin prévue au ${frDate(d.date_fin_initiale)})</dd>` : ''}
+          <dt>Produits</dt><dd>${d.nb_produits} pour votre activité</dd>
+        </dl>
+        <button type="button" class="lien" data-hist="${esc(d.numero)}">Historique →</button>
+      </div>`).join('')}</div>
+      <div class="ensuite"><b class="t">Pour en bénéficier</b><ol>
+        <li>Déposez une demande d’exonération auprès de la Région Guadeloupe en citant la délibération.</li>
+        <li>Attendez l’attestation <b>avant</b> de dédouaner : après, c’est trop tard.</li>
+        <li>Joignez l’attestation à votre déclaration en douane.</li>
+      </ol></div>`;
+  }
+  $('#suite').innerHTML = h;
+
+  document.querySelectorAll('.in-caf').forEach((inp) => {
+    inp.addEventListener('input', recalculer);
+    inp.addEventListener('blur', () => { const v = montant(inp.value); if (v != null) inp.value = v.toLocaleString('fr-FR'); });
+  });
+  recalculer();
+  const f = $('#filtre');
+  if (f) f.addEventListener('input', () => {
+    const q = f.value.toLowerCase().replace(/\s/g, '');
+    document.querySelectorAll('table.produits tbody tr').forEach((tr) => {
+      tr.classList.toggle('cache', q && !tr.dataset.cherche.includes(q));
+    });
+  });
+  const tout = $('#tout');
+  if (tout) tout.addEventListener('click', () => { $('#nc').value = ''; $('#caf').value = ''; verifier(); });
+  document.querySelectorAll('[data-hist]').forEach((b) => b.addEventListener('click', () => {
+    $('#h-num').value = b.dataset.hist; $('#h-date').value = r.date; voirHistorique(true);
+  }));
+  ouvrir();
+}
+
+function ligne(p, i, caf) {
+  const cls = p.taux_exoneration === 0 ? 'exo' : 'part';
+  const libTaux = p.taux_exoneration === 0 ? '0 %' : pct(p.taux_exoneration);
+  const cherche = (p.libelle + p.code_nc).toLowerCase().replace(/\s/g, '');
+  return `<tr data-cherche="${esc(cherche)}" data-gain="${p.gain_points ?? ''}">
+    <td class="lib"><div class="t" title="${esc(p.libelle)}">${esc(p.libelle)}</div><div class="d">${esc(p.deliberation)}${p.autres_deliberations.length ? ' · aussi ' + esc(p.autres_deliberations.join(', ')) : ''}</div></td>
+    <td class="code" data-l="Code NC">${esc(p.code_nc)}</td>
+    <td class="n" data-l="Taux exonéré"><span class="tx ${cls}">${libTaux}</span></td>
+    <td class="n" data-l="Taux normal"><span class="tx norm">${pct(p.taux_normal)}</span></td>
+    <td class="saisie" data-l="Valeur CAF / an"><div class="caf"><input class="in-caf" inputmode="decimal" placeholder="0" aria-label="Valeur CAF annuelle de ${esc(p.code_nc)}" value="${caf != null ? caf.toLocaleString('fr-FR') : ''}"><span>€</span></div></td>
+    <td class="n eco vide" data-l="Économie / an">—</td>
+  </tr>`;
+}
+
+function recalculer() {
+  let total = 0;
+  document.querySelectorAll('table.produits tbody tr').forEach((tr) => {
+    const v = montant(tr.querySelector('.in-caf').value);
+    const g = tr.dataset.gain === '' ? null : Number(tr.dataset.gain);
+    const cell = tr.querySelector('.eco');
+    if (v == null || g == null) { cell.textContent = g == null && v != null ? 'taux ?' : '—'; cell.classList.add('vide'); return; }
+    const e = Math.round(v * Math.max(0, g)) / 100;
+    total += e;
+    cell.textContent = eur(e); cell.classList.remove('vide');
+  });
+  const t = $('#total'); if (t) t.textContent = eur(total);
+}
+
+function ouvrir() {
+  $('#resultat').classList.remove('cache');
+  $('#resultat').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ---------- 3. historique (bonus équipe 3)
+$('#btn-hist').addEventListener('click', () => voirHistorique(false));
+$('#h-num').addEventListener('keydown', (e) => { if (e.key === 'Enter') voirHistorique(false); });
+fetch('/deliberations').then((r) => r.json()).then((liste) => {
+  $('#puces').innerHTML = liste.map((d) => `<button type="button" class="puce ${d.date_abrogation ? 'abrogee' : ''}"
+      data-num="${esc(d.numero)}" aria-pressed="false" title="${esc(d.objet || '')}">${esc(d.numero)}</button>`).join('');
+  document.querySelectorAll('.puce').forEach((b) => b.addEventListener('click', () => { $('#h-num').value = b.dataset.num; voirHistorique(false); }));
+}).catch(() => {});
+
+const TYPE_LIB = { ADOPTION: 'Adoption', PUBLICATION: 'Publication', ENTREE_EN_VIGUEUR: 'Entrée en vigueur',
+  PROROGATION: 'Prorogation', ABROGATION: 'Abrogation', ABROGATION_EMISE: 'Abroge', PROROGATION_EMISE: 'Proroge',
+  FIN_INITIALE: 'Fin prévue', FIN_EFFECTIVE: 'Fin réelle' };
+
+async function voirHistorique(defiler) {
+  masquer('#err-h');
+  const num = $('#h-num').value.trim().toUpperCase().replace(/\s/g, '');
+  if (!num) return montrer('#err-h', 'Choisissez une délibération, par exemple CP/25-456.');
+  const date = $('#h-date').value;
+  document.querySelectorAll('.puce').forEach((b) => b.setAttribute('aria-pressed', b.dataset.num === num));
+  try {
+    const h = await api(`/deliberations/${num}/historique` + (date ? `?date=${date}` : ''));
+    const ici = `<li class="ici-l"><span class="pt"></span><span class="d">${frDate(date)}</span><span class="ici">date choisie</span></li>`;
+    let place = !date;
+    let ev = h.evenements.map((e) => {
+      let m = '';
+      if (!place && e.date && e.date > date) { place = true; m = ici; }
+      return m + `<li class="${e.type} ${date && e.date && e.date <= date ? 'passe' : ''}"><span class="pt"></span><span class="d">${frDate(e.date) || '—'}</span><b>${TYPE_LIB[e.type] || e.type}</b> · ${esc(e.texte)}</li>`;
+    }).join('');
+    if (!place) ev += ici;
+    const r = h.a_la_date;
+    $('#h-res').innerHTML = `
+      ${r ? `<div class="reponse ${r.statut}">${esc(r.phrase)}${r.sans_prorogation ? `<small>${esc(r.sans_prorogation)}</small>` : ''}</div>` : ''}
+      <p class="h-objet">${esc(h.objet || '')}${h.nb_lignes ? ` · ${h.nb_lignes.toLocaleString('fr-FR')} ligne(s) d’exonération` : ''}</p>
+      <ul class="frise">${ev}</ul>`;
+    $('#h-res').classList.remove('cache');
+    if (defiler) $('#historique').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (e) {
+    masquer('#h-res'); montrer('#err-h', e.message);
+  }
+}
+</script>
+</body>
+</html>
